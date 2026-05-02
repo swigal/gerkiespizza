@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gerkie's Pizza Pop Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --red: #d63a2f;
+      --black: #1a1a1a;
+      --cream: #f7eedb;
+      --green: #3e7a4a;
+      --gold: #f2a900;
+      --font-head: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      background: var(--black);
+      color: #fff;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero {
+      background: var(--red);
+      color: #fff;
+      padding: 3rem 0 3.5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--black);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .btn-gp:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-media {
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 1rem;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    main section {
+      padding: 3rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .section-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .section-header p {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 0.98rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: rgba(0, 0, 0, 0.75);
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.05);
+      font-size: 0.8rem;
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .event-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .event-card {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1.1rem 1.25rem;
+      border-left: 4px solid var(--red);
+    }
+
+    .event-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .event-meta {
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 0.5rem;
+    }
+
+    .event-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .gallery-strip {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(160px, 1fr);
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+
+    .gallery-item {
+      background: #fff;
+      border-radius: 0.75rem;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .cta-band {
+      background: var(--black);
+      color: #fff;
+      border-radius: 1rem;
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .cta-band h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .cta-band p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.9rem;
+    }
+
+    .field label {
+      font-weight: 600;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      padding: 0.55rem 0.7rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      font: inherit;
+      background: #fff;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .faq-item h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: rgba(0, 0, 0, 0.75);
+    }
+
+    footer {
+      background: var(--black);
+      color: #fff;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-tagline {
+      opacity: 0.8;
+    }
+
+    .social {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .social a {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper top-bar">
+      <div class="logo">Gerkie's Pizza Pop Up</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#popups">Pop-Ups</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact / Booking</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <section id="home" class="hero">
+      <div class="wrapper hero-inner">
+        <div>
+          <h1>Fresh‑fired pies. Bold flavors. Pizza worth chasing.</h1>
+          <p>Gerkie’s Pizza Pop Up brings handcrafted pies, big vibes, and oven‑hot energy wherever the people are.</p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">See the Menu</a>
+            <a href="#popups" class="btn btn-secondary">Find Our Next Pop‑Up</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          Hero image / video placeholder (blistered crust, melty cheese, pop‑up setup)
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- HOME: About Preview + Featured Pizzas -->
+    <section>
+      <div class="wrapper two-col">
+        <div>
+          <div class="section-header">
+            <h2>Pizza That Shows Up Where the People Are</h2>
+          </div>
+          <p>We pop up at breweries, markets, block parties, and anywhere people gather. Hand‑crafted dough, fresh toppings, and a whole lot of flavor—fired fast and gone quick.</p>
+          <p style="margin-top:0.75rem;">
+            <a href="#about" class="btn btn-secondary" style="border-color:var(--black);color:var(--black);">Learn More</a>
+          </p>
+        </div>
+        <div>
+          <div class="section-header">
+            <h2>Featured Pies</h2>
+            <p>A quick taste of what’s coming out of the oven.</p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>The Gerkie Classic</h3>
+              <p>Red sauce, mozzarella, basil, olive oil. Simple, clean, and always a hit.</p>
+            </article>
+            <article class="card">
+              <h3>Pepperoni Heatwave</h3>
+              <p>Crispy pepperoni, melty mozz, and a hot honey drizzle that brings the heat.</p>
+            </article>
+            <article class="card">
+              <h3>The Garden Crusher</h3>
+              <p>Roasted veggies, garlic cream, herbs, and a perfectly blistered crust.</p>
+            </article>
+            <article class="card">
+              <h3>The Wildcard</h3>
+              <p>A rotating chef’s special that changes with each pop‑up.</p>
+            </article>
+          </div>
+          <p style="margin-top:1rem;">
+            <a href="#menu" class="btn btn-primary">View Full Menu</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME: Upcoming Pop-Ups -->
+    <section id="popups">
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>Where We’re Popping Up Next</h2>
+          <p>Catch us around town before the pies are gone.</p>
+        </div>
+        <div class="event-list">
+          <article class="event-card">
+            <h3>Brewery Night</h3>
+            <div class="event-meta">Saturday · 6–9 PM · Local Brewery</div>
+            <div class="event-actions">
+              <button class="btn btn-primary" type="button">Add to Calendar</button>
+              <button class="btn btn-secondary" type="button">Get Directions</button>
+            </div>
+          </article>
+          <article class="event-card">
+            <h3>Farmers Market Pop‑Up</h3>
+            <div class="event-meta">Sunday · 10 AM–1 PM · Downtown Market</div>
+            <div class="event-actions">
+              <button class="btn btn-primary" type="button">Add to Calendar</button>
+              <button class="btn btn-secondary" type="button">Get Directions</button>
+            </div>
+          </article>
+          <article class="event-card" style="background-color: var(--gold)">
+            <h3>Block Party Slice Drop</h3>
+            <div class="event-meta">Next Friday · 5–8 PM · Riverfront</div>
+            <div class="event-actions">
+              <button class="btn btn-primary" type="button">Add to Calendar</button>
+              <button class="btn btn-secondary" type="button">Get Directions</button>
+            </div>
+          </article>
+        </div>
+        <p style="margin-top:1.25rem;">
+          <a href="#popups" class="btn btn-secondary" style="border-color:var(--black);color:var(--black);">See All Events</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- HOME: Gallery Strip -->
+    <section id="gallery">
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>A Slice of the Action</h2>
+          <p>Pizza close‑ups, pop‑up vibes, and behind‑the‑scenes moments.</p>
+        </div>
+        <div class="gallery-strip">
+          <div class="gallery-item">Pizza close‑up</div>
+          <div class="gallery-item">Pop‑up booth</div>
+          <div class="gallery-item">Friends with slices</div>
+          <div class="gallery-item">Oven in action</div>
+          <div class="gallery-item">Dough stretch</div>
+          <div class="gallery-item">Night pop‑up</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME: Booking CTA -->
+    <section>
+      <div class="wrapper">
+        <div class="cta-band">
+          <div>
+            <h2>Want Gerkie’s at Your Event?</h2>
+            <p>Perfect for breweries, festivals, private parties, and community events.</p>
+          </div>
+          <div>
+            <a href="#contact" class="btn btn-primary">Book the Pop‑Up</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU PAGE -->
+    <section id="menu">
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>Menu</h2>
+          <p>Our pies, sides, and sips—fresh from the fire.</p>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Classics</h3>
+            <div class="card" style="margin-top:0.75rem;">
+              <h3>The Gerkie Classic</h3>
+              <p>Red sauce, mozzarella, basil, olive oil.</p>
+            </div>
+            <div class="card" style="margin-top:0.75rem;">
+              <h3>Pepperoni Heatwave</h3>
+              <p>Crispy pepperoni, hot honey drizzle.</p>
+            </div>
+
+            <h3 style="margin-top:1.75rem;">Specialty Pies</h3>
+            <div class="card" style="margin-top:0.75rem;">
+              <h3>The Garden Crusher</h3>
+              <p>Roasted veggies, garlic cream, herbs.</p>
+            </div>
+            <div class="card" style="margin-top:0.75rem;">
+              <h3>The Wildcard</h3>
+              <p>A rotating special that changes with each pop‑up.</p>
+            </div>
+          </div>
+
+          <div>
+            <h3>Build Your Own (Optional)</h3>
+            <p style="font-size:0.9rem;margin-top:0.35rem;">Choose your base, toppings, and drizzle.</p>
+            <div style="margin-top:0.75rem;">
+              <span class="pill">Red sauce</span>
+              <span class="pill">Garlic cream</span>
+              <span class="pill">Mozzarella</span>
+              <span class="pill">Pepperoni</span>
+              <span class="pill">Sausage</span>
+              <span class="pill">Veggies</span>
+              <span class="pill">Hot honey</span>
+            </div>
+
+            <h3 style="margin-top:1.75rem;">Sides</h3>
+            <div class="card" style="margin-top:0.75rem;">
+              <h3>Garlic Knots</h3>
+              <p>Soft, buttery knots with garlic and herbs.</p>
+            </div>
+            <div class="card" style="margin-top:0.75rem;">
+              <h3>Side Salad</h3>
+              <p>Crisp greens, veggies, and house dressing.</p>
+            </div>
+
+            <h3 style="margin-top:1.75rem;">Drinks</h3>
+            <div class="card" style="margin-top:0.75rem;">
+              <h3>Craft Sodas &amp; Lemonade</h3>
+              <p>Rotating selection, ice‑cold.</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:1.5rem;">
+          <a href="#popups" class="btn btn-secondary" style="border-color:var(--black);color:var(--black);">Find Our Next Pop‑Up</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- POP-UP SCHEDULE PAGE (extended) -->
+    <section>
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>Pop‑Up Schedule</h2>
+          <p>See everywhere Gerkie’s is rolling in next.</p>
+        </div>
+
+        <div class="event-list">
+          <article class="event-card">
+            <h3>Brewery Night</h3>
+            <div class="event-meta">123 Brewery St · Saturday · 6–9 PM</div>
+            <div class="event-actions">
+              <button class="btn btn-primary" type="button">Add to Calendar</button>
+              <button class="btn btn-secondary" type="button">Get Directions</button>
+            </div>
+          </article>
+          <article class="event-card">
+            <h3>Farmers Market Pop‑Up</h3>
+            <div class="event-meta">Downtown Market · Sunday · 10 AM–1 PM</div>
+            <div class="event-actions">
+              <button class="btn btn-primary" type="button">Add to Calendar</button>
+              <button class="btn btn-secondary" type="button">Get Directions</button>
+            </div>
+          </article>
+          <article class="event-card">
+            <h3>Private Event</h3>
+            <div class="event-meta">Booked · Inquire for availability</div>
+            <div class="event-actions">
+              <button class="btn btn-secondary" type="button">Contact Us</button>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top:2rem;max-width:420px;">
+          <h3>Don’t Miss a Pop‑Up</h3>
+          <p style="font-size:0.9rem;margin-top:0.25rem;">Get email alerts when we announce new locations.</p>
+          <form style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <input type="email" placeholder="Your email" style="flex:1;min-width:180px;padding:0.55rem 0.7rem;border-radius:0.5rem;border:1px solid rgba(0,0,0,0.18);" />
+            <button class="btn btn-primary" type="submit">Notify Me</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY PAGE (extended) -->
+    <section>
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>A closer look at the pies, the people, and the pop‑ups.</p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Pizzas</h3>
+            <p>Close‑ups of blistered crusts, melty cheese, and bold toppings.</p>
+          </div>
+          <div class="card">
+            <h3>Pop‑Up Booth</h3>
+            <p>The setup, the oven, and the street‑food energy.</p>
+          </div>
+          <div class="card">
+            <h3>People &amp; Vibes</h3>
+            <p>Friends, families, and crowds chasing slices.</p>
+          </div>
+          <div class="card">
+            <h3>Behind the Scenes</h3>
+            <p>Dough stretching, topping builds, and oven action.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:1.75rem;">
+          <div class="hero-media" style="background:rgba(0,0,0,0.08);color:rgba(0,0,0,0.7);">
+            Optional video montage placeholder (short clip of the pop‑up in action)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about">
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>About Gerkie’s</h2>
+          <p>The story behind the pop‑up and the pies.</p>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Our Story</h3>
+            <p style="margin-top:0.35rem;">
+              Gerkie’s started with a simple idea: great pizza shouldn’t stay in one place. We built a pop‑up that brings the fire wherever the people are—breweries, markets, block parties, and beyond.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Every pie starts with dough that rests for days, not hours. We layer on fresh ingredients, bold flavors, and a little bit of chaos from a hot oven. The result? Pizza worth chasing.
+            </p>
+          </div>
+          <div>
+            <h3>What Makes Us Different</h3>
+            <ul style="margin-top:0.5rem;font-size:0.9rem;padding-left:1.1rem;">
+              <li>Hand‑crafted dough and fresh ingredients</li>
+              <li>Rotating specials and limited‑run pies</li>
+              <li>Pop‑up spirit—always on the move</li>
+              <li>Community‑driven, people‑first energy</li>
+            </ul>
+
+            <h3 style="margin-top:1.75rem;">Meet the Team</h3>
+            <div class="card" style="margin-top:0.75rem;">
+              <h3>Gerkie (Founder / Pizza Maker)</h3>
+              <p>Part dough nerd, part flavor chaser, all‑in on bringing great pizza to unexpected places.</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:1.5rem;">
+          <a href="#contact" class="btn btn-primary">Book the Pop‑Up</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT / BOOKING PAGE -->
+    <section id="contact">
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>Contact &amp; Booking</h2>
+          <p>Bring Gerkie’s to your next event.</p>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Booking Form</h3>
+            <form style="margin-top:0.75rem;display:flex;flex-direction:column;gap:0.75rem;">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" placeholder="Your name" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" placeholder="you@example.com" />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" type="tel" placeholder="(555) 555‑5555" />
+                </div>
+                <div class="field">
+                  <label for="event-type">Event Type</label>
+                  <select id="event-type">
+                    <option>Choose an event type</option>
+                    <option>Brewery / Taproom</option>
+                    <option>Private Party</option>
+                    <option>Festival / Market</option>
+                    <option>Corporate Event</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="event-date">Event Date</label>
+                  <input id="event-date" type="date" />
+                </div>
+                <div class="field">
+                  <label for="attendance">Estimated Attendance</label>
+                  <input id="attendance" type="number" placeholder="Approx. headcount" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Tell us about your event..."></textarea>
+              </div>
+              <div>
+                <button class="btn btn-primary" type="submit">Submit Booking Request</button>
+              </div>
+            </form>
+          </div>
+
+          <div>
+            <h3>General Contact</h3>
+            <p style="font-size:0.9rem;margin-top:0.35rem;">
+              Have questions about pop‑ups, menu options, or availability? Reach out anytime.
+            </p>
+            <p style="font-size:0.9rem;margin-top:0.75rem;">
+              <strong>Email:</strong> hello@gerkiespizza.com<br />
+              <strong>Instagram:</strong> @gerkiespizza<br />
+              <strong>Facebook:</strong> /gerkiespizza
+            </p>
+
+            <h3 style="margin-top:1.75rem;">FAQ</h3>
+            <div class="faq-list">
+              <div class="faq-item">
+                <h3>How far do you travel?</h3>
+                <p>We typically serve within a set radius of our home base, but reach out and we’ll see what’s possible.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Do you cater private events?</h3>
+                <p>Yes—birthdays, weddings, corporate events, and more. Use the form to tell us about your plans.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Do you offer gluten‑free options?</h3>
+                <p>We can offer limited gluten‑friendly options at select pop‑ups. Ask about availability when you book.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Can you handle large crowds?</h3>
+                <p>We’re built for busy nights and hungry lines. Let us know your expected headcount and timing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper footer-inner">
+      <div>
+        <div class="logo">Gerkie's Pizza Pop Up</div>
+        <p class="footer-tagline">Pizza worth chasing.</p>
+      </div>
+      <div class="footer-nav">
+        <a href="#menu">Menu</a>
+        <a href="#popups">Pop‑Up Schedule</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <div>
+        <div class="social">
+          <a href="#">IG</a>
+          <a href="#">FB</a>
+          <a href="#">TikTok</a>
+        </div>
+        <p style="margin-top:0.5rem;opacity:0.7;">&copy; <span id="year"></span> Gerkie’s Pizza Pop Up</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
