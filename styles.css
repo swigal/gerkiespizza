@@ -26,7 +26,7 @@ body {
     background-color: var(--gp-creamy-mozz);
 }
 
-.nav-bg {
+.nav-bg, header{
     --nav-color: var(--gp-charred-black);
 
     background-color: hsl(from var(--nav-color) h s l);
@@ -83,6 +83,17 @@ h4~p{
       transform: translateY(-1px);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
+
+header .btn-gp-primary:hover {
+    color: var(--gp-fire-red);
+    background: transparent;
+    border-color: var(--gp-fire-red);
+}
+#booking .btn-gp-secondary:hover {
+    color: var(--gp-charred-black);
+    background-color: var(--gp-hothoney-gold);
+}
+
 
 .btn-gp {
       display: inline-flex;
