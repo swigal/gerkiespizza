@@ -21,6 +21,15 @@
     --fs-4: clamp(2.3328rem, 1.5919rem + 3.2931vw, 4.144rem);
     --fs-5: clamp(2.7994rem, 1.6848rem + 4.9538vw, 5.524rem);
 }
+* {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+}
 
 body {
     background-color: var(--gp-creamy-mozz);
@@ -63,9 +72,8 @@ body {
 
 h1, h2 {
     font-size: var(--fs-3);
-  font-weight: 900;
 }
-h1+p, h2+p {
+h2 ~ p {
     font-size: var(--fs-1);
 }
 h4~p{
@@ -84,12 +92,12 @@ h4~p{
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
-header .btn-gp-primary:hover {
+.btn-gp-primary:hover {
     color: var(--gp-fire-red);
     background: transparent;
     border-color: var(--gp-fire-red);
 }
-#booking .btn-gp-secondary:hover {
+.btn-gp-secondary:hover {
     color: var(--gp-charred-black);
     background-color: var(--gp-hothoney-gold);
 }
@@ -127,6 +135,10 @@ header .btn-gp-primary:hover {
         background: transparent;
         color:var(--gp-charred-black); 
         border-color: var(--gp-charred-black);
+    }
+    .btn-gp-tertiary:hover {
+        color: var(--gp-creamy-mozz);
+        background-color: var(--gp-charred-black);
     }
     .btn-gp-tertiary a {
         text-decoration: none;
