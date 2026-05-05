@@ -47,7 +47,7 @@ body {
 }
 
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/nickflims-pizza-7359755_1920.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/pizza-hero-image.jpg);
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -115,6 +115,12 @@ h4~p{
       cursor: pointer;
       transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
     }
+.btn-gp a, .gp-btn a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+}
+
 
     .btn-gp-primary {
       background: var(--gp-fire-red);
@@ -201,3 +207,24 @@ h4~p{
     color: var(--gp-basil-green);
     /*background-color: var(--gp-creamy-mozz);*/
 }
+
+.gallery-strip {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(160px, 1fr);
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+
+    .gallery-item {
+      border-radius: 0.75rem;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.7);
+          background-position: center;
+          background-size: cover;
+    }
