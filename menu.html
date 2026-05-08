@@ -3,17 +3,26 @@
   <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gerkie's Pizza Pop-Up</title>
+<title>Gerkies - Menu</title>
 <meta name="description" content="Gerkie’s brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
 <meta name="keywords" content="Pizza, Parkersburg, Belpre, Ohio, OH, WV, West Virginia, Pop-Up, local, locally owned">
 <meta name="author" content="Samuel Wigal">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Gerkie's Pizza Pop-Up">
+<meta property="og:title" content="Gerkie's - Menu">
 <meta property="og:description" content="Gerkie’s brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://gerkiespizza.samuelwigal.com/assets/link-preview-image-1200x630.jpeg">
-<meta property="og:site_name" content="Gerkie's Pizza Pop-UP">
+<meta property="og:site_name" content="Gerkie's Pizza Pop-UP">`
+
+<!--Favicon & PWA Setup-->
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png?v=20260507" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg?v=20260507" />
+<link rel="shortcut icon" href="/favicon/favicon.ico?v=20260507" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=20260507" />
+<meta name="apple-mobile-web-app-title" content="Gerkies" />
+<link rel="manifest" href="/favicon/site.webmanifest?v=20260507" />
+
     <!--Bootstrap Links-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
@@ -48,6 +57,16 @@
     content: "·";
     margin-left: 0.75rem;
     font-weight: bold;
+}
+
+.toppings{
+  list-style:none;
+}
+ul li {
+  font-size: var(--fs-0)
+}
+h4+h4 {
+  color: var(--gp-hothoney-gold);
 }
     </style>
   </head>
@@ -96,16 +115,20 @@
 
   <section class="container-lg" id="signature-pies">
     
-    <div class="row gx-5">
-        <div class="col-sm-6">
-            <h2>
+    <div class="row gx-5 pt-5">
+        <div class="col-md-6">
+              <h2>
                 Signature Pizza
             </h2>
+            
             <div class="pb-3">
                 <div class="card card-body gp-card-border text-bg-dark">
-                    <h4 class="card-title">
+                  <div class="clearfix">
+                    <h4 class="card-title float-start">
                         Classic Pepperoni
                     </h4>
+                    <h4 class="float-end">$10</h4>
+                  </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
                         <li>Extra Cheese</li>
@@ -118,9 +141,12 @@
             </div>
             <div class="pb-3">
             <div class="card card-body gp-card-border text-bg-dark">
-                <h4 class="card-title">
-                    Gerkies' Favorite
-                </h4>
+                <div class="clearfix">
+                    <h4 class="card-title float-start">
+                        Gerkies' Favorite
+                    </h4>
+                    <h4 class="float-end">$13</h4>
+                  </div>
                 <ul class="inline-bullets">
                     <li>Sauce</li>
                     <li>Cheese</li>
@@ -135,9 +161,12 @@
             </div></div>
             <div class="pb-3">
                 <div class="card card-body gp-card-border text-bg-dark">
-                    <h4 class="card-title">
-                        The MOVP
+                    <div class="clearfix">
+                    <h4 class="card-title float-start">
+                      The MOVP
                     </h4>
+                    <h4 class="float-end">$11</h4>
+                  </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
                         <li>Cheese</li>
@@ -151,9 +180,12 @@
             </div>
             <div class="pb-3">
                 <div class="card card-body gp-card-border text-bg-dark">
-                    <h4 class="card-title">
+                    <div class="clearfix">
+                    <h4 class="card-title float-start">
                         Big G Supreme
                     </h4>
+                    <h4 class="float-end">$15</h4>
+                  </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
                         <li>Cheese</li>
@@ -171,9 +203,12 @@
             </div>
             <div class="pb-3">
                 <div class="card card-body gp-card-border text-bg-dark">
-                    <h4 class="card-title">
+                    <div class="clearfix">
+                    <h4 class="card-title float-start">
                         Hawaiian Luau
                     </h4>
+                    <h4 class="float-end">$12</h4>
+                  </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
                         <li>Cheese</li>
@@ -188,9 +223,12 @@
             </div>
             <div class="pb-3">
                 <div class="card card-body gp-card-border text-bg-dark">
-                    <h4 class="card-title">
+                    <div class="clearfix">
+                    <h4 class="card-title float-start">
                         Street-Meat Combo
                     </h4>
+                    <h4 class="float-end">$12</h4>
+                  </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
                         <li>Cheese</li>
@@ -205,9 +243,12 @@
             </div>
             <div class="pb-3">
                 <div class="card card-body gp-card-border text-bg-dark">
-                    <h4 class="card-title">
+                    <div class="clearfix">
+                    <h4 class="card-title float-start">
                         Market-Day Veg
                     </h4>
+                    <h4 class="float-end">$12</h4>
+                  </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
                         <li>Cheese</li>
@@ -224,9 +265,12 @@
             </div>
             <div class="pb-3">
                 <div class="card card-body gp-card-border text-bg-dark">
-                    <h4 class="card-title">
+                    <div class="clearfix">
+                    <h4 class="card-title float-start">
                         Mom's Pie
                     </h4>
+                    <h4 class="float-end">$11</h4>
+                  </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
                         <li>Cheese</li>
@@ -242,6 +286,45 @@
 
         </div>
         <div class="col-md">
+          <div>
+            <h2>Toppings</h2>
+            <div class="pb-3">
+                <div class="card card-body gp-card-border text-bg-dark">
+                    <div class="clearfix">
+                    <h4 class="card-title float-start">
+                        Build You Own Pie
+                    </h4>
+                    <h4 class="float-end"><small>Starting at</small> $10</h4>
+                  </div>        
+                    <p>
+                        Choose your own toppings or customize any pizza.
+                    </p>
+                </div>
+            </div>
+            
+            <ul class="toppings">
+              <li class="">
+                <h4>Meats &dash; <span class="hothoney-gold badge rounded-pill">75&cent;</span></h4>
+              </li>
+              <ul class="toppings">
+                <li>Pepperoni — #1 topping in the region; cup-and-char style</li>
+                <li>Sausage — Italian, hearty, perfect on combos</li>
+                <li>Bacon — smoky, great on BBQ-style pies</li>
+                <li>Ham — classic pairing with pineapple</li>
+                <li>Extra Cheese — especially beloved in Ohio</li>
+              </ul>
+
+              <li class="pt-2"><h4>Veggies &amp; More &dash; <span class="hothoney-gold badge rounded-pill">50&cent;</span></h4></li>
+              <ul class="toppings"> 
+                <li>Mushrooms — top Midwest veggie pick</li>
+                <li>Green Peppers — crisp and bright</li>
+                <li>Onions — sweetens as it bakes</li>
+                <li>Banana Peppers — Ohio Valley favorite</li>
+                <li>Black Olives — classic on family-style pies</li>
+                <li>Pineapple — controversial but loyal fanbase</li>
+              </ul>
+            </ul>
+          </div>
         </div>
     </div>
   </section>
