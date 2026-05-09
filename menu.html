@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gerkies - Menu</title>
-<meta name="description" content="Gerkie’s brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
+<meta name="description" content="Gerkies brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
 <meta name="keywords" content="Pizza, Parkersburg, Belpre, Ohio, OH, WV, West Virginia, Pop-Up, local, locally owned">
 <meta name="author" content="Samuel Wigal">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Gerkie's - Menu">
-<meta property="og:description" content="Gerkie’s brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
+<meta property="og:title" content="Gerkies - Menu">
+<meta property="og:description" content="Gerkies brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://gerkiespizza.samuelwigal.com/assets/link-preview-image-1200x630.jpeg">
-<meta property="og:site_name" content="Gerkie's Pizza Pop-UP">`
+<meta property="og:site_name" content="Gerkies Pizza Pop-UP">`
 
 <!--Favicon & PWA Setup-->
 <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png?v=20260507" sizes="96x96" />
@@ -63,10 +63,25 @@
   list-style:none;
 }
 ul li {
-  font-size: var(--fs-0)
+  font-size: var(--fs-0);
 }
 h4+h4 {
   color: var(--gp-hothoney-gold);
+}
+
+.gp-menu-card-dark {
+  background-color: var(--gp-charred-black);
+  color: var(--bs-light);
+}
+.gp-favorite::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('./favicon/favicon-32x32.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Aligns image with text */
 }
     </style>
   </head>
@@ -122,12 +137,12 @@ h4+h4 {
             </h2>
             
             <div class="pb-3">
-                <div class="card card-body gp-card-border text-bg-dark">
-                  <div class="clearfix">
-                    <h4 class="card-title float-start">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                  <div class="row">
+                    <h4 class="card-title col">
                         Classic Pepperoni
                     </h4>
-                    <h4 class="float-end">$10</h4>
+                    <h4 class="col-auto">$10</h4>
                   </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
@@ -140,12 +155,12 @@ h4+h4 {
                 </div>
             </div>
             <div class="pb-3">
-            <div class="card card-body gp-card-border text-bg-dark">
-                <div class="clearfix">
-                    <h4 class="card-title float-start">
+            <div class="card card-body gp-card-border gp-menu-card-dark">
+                <div class="row">
+                    <h4 class="card-title col gp-favorite">
                         Gerkies' Favorite
                     </h4>
-                    <h4 class="float-end">$13</h4>
+                    <h4 class="col-auto">$13</h4>
                   </div>
                 <ul class="inline-bullets">
                     <li>Sauce</li>
@@ -160,12 +175,12 @@ h4+h4 {
                 </p>
             </div></div>
             <div class="pb-3">
-                <div class="card card-body gp-card-border text-bg-dark">
-                    <div class="clearfix">
-                    <h4 class="card-title float-start">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                    <div class="row">
+                    <h4 class="card-title col">
                       The MOVP
                     </h4>
-                    <h4 class="float-end">$11</h4>
+                    <h4 class="col-auto">$11</h4>
                   </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
@@ -179,12 +194,12 @@ h4+h4 {
                 </div>
             </div>
             <div class="pb-3">
-                <div class="card card-body gp-card-border text-bg-dark">
-                    <div class="clearfix">
-                    <h4 class="card-title float-start">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                    <div class="row">
+                    <h4 class="card-title col">
                         Big G Supreme
                     </h4>
-                    <h4 class="float-end">$15</h4>
+                    <h4 class="col-auto">$15</h4>
                   </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
@@ -202,12 +217,12 @@ h4+h4 {
                 </div>
             </div>
             <div class="pb-3">
-                <div class="card card-body gp-card-border text-bg-dark">
-                    <div class="clearfix">
-                    <h4 class="card-title float-start">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                    <div class="row">
+                    <h4 class="card-title col">
                         Hawaiian Luau
                     </h4>
-                    <h4 class="float-end">$12</h4>
+                    <h4 class="col-auto">$12</h4>
                   </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
@@ -222,19 +237,18 @@ h4+h4 {
                 </div>
             </div>
             <div class="pb-3">
-                <div class="card card-body gp-card-border text-bg-dark">
-                    <div class="clearfix">
-                    <h4 class="card-title float-start">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                    <div class="row">
+                    <h4 class="card-title col gp-favorite">
                         Street-Meat Combo
                     </h4>
-                    <h4 class="float-end">$12</h4>
+                    <h4 class="col-auto">$12</h4>
                   </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
                         <li>Cheese</li>
                         <li>Pepperoni</li>
                         <li>Sausage</li>
-                        <li>Pineapple</li>
                     </ul>                
                     <p>
                         Simple, hearty, and always satisfying.
@@ -242,12 +256,12 @@ h4+h4 {
                 </div>
             </div>
             <div class="pb-3">
-                <div class="card card-body gp-card-border text-bg-dark">
-                    <div class="clearfix">
-                    <h4 class="card-title float-start">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                    <div class="row">
+                    <h4 class="card-title col">
                         Market-Day Veg
                     </h4>
-                    <h4 class="float-end">$12</h4>
+                    <h4 class="col-auto">$12</h4>
                   </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
@@ -264,12 +278,12 @@ h4+h4 {
                 </div>
             </div>
             <div class="pb-3">
-                <div class="card card-body gp-card-border text-bg-dark">
-                    <div class="clearfix">
-                    <h4 class="card-title float-start">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                    <div class="row">
+                    <h4 class="card-title col">
                         Mom's Pie
                     </h4>
-                    <h4 class="float-end">$11</h4>
+                    <h4 class="col-auto">$11</h4>
                   </div>
                     <ul class="inline-bullets">
                         <li>Sauce</li>
@@ -289,12 +303,12 @@ h4+h4 {
           <div>
             <h2>Toppings</h2>
             <div class="pb-3">
-                <div class="card card-body gp-card-border text-bg-dark">
-                    <div class="clearfix">
-                    <h4 class="card-title float-start">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                    <div class="row">
+                    <h4 class="card-title col">
                         Build You Own Pie
                     </h4>
-                    <h4 class="float-end"><small>Starting at</small> $10</h4>
+                    <h4 class="col-auto"><small>Starting at</small> $10</h4>
                   </div>        
                     <p>
                         Choose your own toppings or customize any pizza.
@@ -307,21 +321,21 @@ h4+h4 {
                 <h4>Meats &dash; <span class="hothoney-gold badge rounded-pill">75&cent;</span></h4>
               </li>
               <ul class="toppings">
-                <li>Pepperoni — #1 topping in the region; cup-and-char style</li>
-                <li>Sausage — Italian, hearty, perfect on combos</li>
-                <li>Bacon — smoky, great on BBQ-style pies</li>
-                <li>Ham — classic pairing with pineapple</li>
-                <li>Extra Cheese — especially beloved in Ohio</li>
+                <li><b>Pepperoni</b> — #1 topping in the region; cup-and-char style</li>
+                <li><b>Sausage</b> — Italian, hearty, perfect on combos</li>
+                <li><b>Bacon</b> — smoky, great on BBQ-style pies</li>
+                <li><b>Ham</b> — classic pairing with pineapple</li>
+                <li><b>Extra Cheese</b> — especially beloved in Ohio</li>
               </ul>
 
               <li class="pt-2"><h4>Veggies &amp; More &dash; <span class="hothoney-gold badge rounded-pill">50&cent;</span></h4></li>
               <ul class="toppings"> 
-                <li>Mushrooms — top Midwest veggie pick</li>
-                <li>Green Peppers — crisp and bright</li>
-                <li>Onions — sweetens as it bakes</li>
-                <li>Banana Peppers — Ohio Valley favorite</li>
-                <li>Black Olives — classic on family-style pies</li>
-                <li>Pineapple — controversial but loyal fanbase</li>
+                <li><b>Mushrooms</b> — top Midwest veggie pick</li>
+                <li><b>Green Peppers</b> — crisp and bright</li>
+                <li><b>Onions</b> — sweetens as it bakes</li>
+                <li><b>Banana Peppers</b> — Ohio Valley favorite</li>
+                <li><b>Black Olives</b> — classic on family-style pies</li>
+                <li><b>Pineapple</b> — controversial but loyal fanbase</li>
               </ul>
             </ul>
           </div>
@@ -340,13 +354,13 @@ h4+h4 {
             </div>
             <div class="col-12 col-md-6 col-lg-4 py-3 text-center">
               <nav class="nav justify-content-center">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="./index.html">
                   Home
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="./menu.html`">
                   Menu
                 </a>
-                <a class="nav-link">
+                <a class="nav-link" href="./pop-ups.html">
                   Pop-Ups
                 </a>
                 <a class="nav-link">
@@ -355,7 +369,7 @@ h4+h4 {
                 <a class="nav-link" >
                   Gallery
                 </a>
-                <a class="nav-link" >
+                <a class="nav-link" href="./pop-ups.html#booking">
                   Booking
                 </a>
               </nav>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" bs-data-theme="dark">
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        if (theme) {
+          document.documentElement.setAttribute("data-bs-theme", theme);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.setAttribute("data-bs-theme", "dark");
+          document.addEventListener("DOMContentLoaded", () => {
+            // Your code runs here after HTML is parsed
+            themeIcon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
+            });
+
+        } else {
+          document.documentElement.setAttribute("data-bs-theme", "light");themeIcon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+        }
+      })();
+    </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerkies Pizza Digital Menu Board</title>
+    <!--Bootstrap Links-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts - Gerkie's Brand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+
+    <style>
+        body, html { margin: 0; padding: 0; width: 1920px; height: 1080px; overflow: hidden; }
+
+        :root {
+            /* Primary Colors */
+            --gp-fire-red: #d63a2f;
+            /* Fire Red - Warm, energetic, evokes the oven heat.*/
+            --gp-charred-black: #1a1a1a;
+            /* Charred Black - Warm, energetic, evokes the oven heat.*/
+            --gp-creamy-mozz: #f7eedb;
+            /* Creamy Mozz - Warm, energetic, evokes the oven heat.*/
+
+            /* Secondary Colors */
+            --gp-basil-green: #3E7A4A;
+            /* Basil Green - Fresh, natural accent. */
+            --gp-hothoney-gold: #f2a900;
+            /* Hot Honey Gold - A pop of sweetness and heat. */
+            --gp-brickoven-orange: #e05c2b;
+            /* Brick Oven Orange - Adds warmth and vibrancy. */
+
+            /* Font Sizing */
+            --fs--2: clamp(.7387rem, .7987rem + -.0775vw, .7813rem);
+            --fs--1: clamp(.9375rem, .9182rem + .0857vw, .9846rem);
+            --fs-0: clamp(1.125rem, 1.0483rem + .3409vw, 1.3125rem);
+            --fs-1: clamp(1.35rem, 1.1865rem + .7265vw, 1.7496rem);
+            --fs-2: clamp(1.62rem, 1.3287rem + 1.2948vw, 2.3322rem);
+            --fs-3: clamp(1.944rem, 1.4675rem + 2.1178vw, 3.1088rem);
+            --fs-4: clamp(2.3328rem, 1.5919rem + 3.2931vw, 4.144rem);
+            --fs-5: clamp(2.7994rem, 1.6848rem + 4.9538vw, 5.524rem);
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bs-body-bg);
+            color: var(--bs-body-color);
+        }
+
+        h1 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 3vw;
+        }
+        h2, h3, h4 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 2vw;
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 400;
+            font-size: 1.25vw;
+            margin: 0px;
+        }
+        .inline-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+        .inline-bullets li {
+    display: flex;
+    align-items: center;
+    font-style: oblique;
+}
+
+.inline-bullets li:not(:last-child)::after {
+    content: "·";
+    margin-left: 0.75rem;
+    font-weight: bold;
+}
+h4+h4 {
+  color: var(--gp-hothoney-gold);
+}
+.toppings{
+  list-style:none;
+}
+    </style>
+</head>
+
+<body class="container-fluid d-flex flex-column" >
+    <header class="d-flex  justify-content-between align-items-center py-3 border-bottom" style="border-color: var(--gp-fire-red);">
+        <img src="assets/gerkies-pizza-secondary.svg" alt="Gerkie's Pizza Logo" style="height: 80px;">
+        <p class="text-end">Fresh‑fired pies. Bold flavors. Pizza worth chasing.</p>
+    </header>
+
+  <section class="container-fluid" id="signature-pies">
+    
+    <div class="row gx-5 pt-2">
+
+        <div class="col-3">
+          <div>
+            <h1>Toppings</h1>
+                       
+            <ul class="toppings">
+              <li class="">
+                <h4>Meats &dash; <span class="hothoney-gold badge rounded-pill">75&cent;</span></h4>
+              </li>
+              <ul class="toppings">
+                <li><b>Pepperoni</b> — #1 topping in the region; cup-and-char style</li>
+                <li><b>Sausage</b> — Italian, hearty, perfect on combos</li>
+                <li><b>Bacon</b> — smoky, great on BBQ-style pies</li>
+                <li><b>Ham</b> — classic pairing with pineapple</li>
+                <li><b>Extra Cheese</b> — especially beloved in Ohio</li>
+              </ul>
+
+              <li class="pt-2"><h4>Veggies &amp; More &dash; <span class="hothoney-gold badge rounded-pill">50&cent;</span></h4></li>
+              <ul class="toppings"> 
+                <li><b>Mushrooms</b> — top Midwest veggie pick</li>
+                <li><b>Green Peppers</b> — crisp and bright</li>
+                <li><b>Onions</b> — sweetens as it bakes</li>
+                <li><b>Banana Peppers</b> — Ohio Valley favorite</li>
+                <li><b>Black Olives</b> — classic on family-style pies</li>
+                <li><b>Pineapple</b> — controversial but loyal fanbase</li>
+              </ul>
+            </ul>
+            <div class="pb-3">
+                <div class="card card-body gp-card-border gp-menu-card-dark">
+                    <div>
+                    <h4>
+                        Build You Own Pie
+                    </h4>
+                    <h4 ><small>Starting at</small> $10</h4>
+                  </div>        
+                    <p>
+                        Choose your own toppings or customize any pizza.
+                    </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-9">
+              <h1>
+                Signature Pizza
+            </h1>
+            <div class="row row-cols-2 h-100 gx-4">
+                <div class="pb-3 col">
+                <div class="card card-body gp-card-border gp-menu-card-dark h-100">
+                  <div class="row">
+                    <h4 class="card-title col">
+                        Classic Pepperoni
+                    </h4>
+                    <h4 class="col-auto">$10</h4>
+                  </div>
+                    <ul class="inline-bullets">
+                        <li>Sauce</li>
+                        <li>Extra Cheese</li>
+                        <li>Pepperoni</li>
+                    </ul>                
+                    <p style="padding: 0px">
+                        A Midwest staple—loaded with melty mozz, crispy pepperoni, simple and perfect.
+                    </p>
+                </div>
+            </div>
+            <div class="pb-3 col">
+            <div class="card card-body gp-card-border gp-menu-card-dark h-100">
+                <div class="row">
+                    <h4 class="card-title col gp-favorite">
+                        Gerkies' Favorite
+                    </h4>
+                    <h4 class="col-auto">$13</h4>
+                  </div>
+                <ul class="inline-bullets">
+                    <li>Sauce</li>
+                    <li>Cheese</li>
+                    <li>Pepperoni</li>
+                    <li>Ham</li>
+                    <li>Bacon</li>
+                    <li>Sausage</li>
+                </ul>
+                <p>
+                    A meat lover’s dream built on thick, bold flavor.
+                </p>
+            </div></div>
+            <div class="pb-3 col">
+                <div class="card card-body gp-card-border gp-menu-card-dark h-100">
+                    <div class="row">
+                    <h4 class="card-title col">
+                      The MOVP
+                    </h4>
+                    <h4 class="col-auto">$11</h4>
+                  </div>
+                    <ul class="inline-bullets">
+                        <li>Sauce</li>
+                        <li>Cheese</li>
+                        <li>Pepperoni</li>
+                        <li>Banana Peppers</li>
+                    </ul>
+                    <p>
+                        A nod to Ohio Valley pizza shops—bright, tangy, and addictive.
+                    </p>
+                </div>
+            </div>
+            <div class="pb-3 col">
+                <div class="card card-body gp-card-border gp-menu-card-dark h-100">
+                    <div class="row">
+                    <h4 class="card-title col">
+                        Big G Supreme
+                    </h4>
+                    <h4 class="col-auto">$15</h4>
+                  </div>
+                    <ul class="inline-bullets">
+                        <li>Sauce</li>
+                        <li>Cheese</li>
+                        <li>Pepperoni</li>
+                        <li>Sausage</li>
+                        <li>Mushrooms</li>
+                        <li>Onions</li>
+                        <li>Green Peppers</li>
+                        <li>Black Olives</li>
+                    </ul>                
+                    <p>
+                        The full lineup. Big flavor, classic combo.
+                    </p>
+                </div>
+            </div>
+            <div class="pb-3 col">
+                <div class="card card-body gp-card-border gp-menu-card-dark h-100">
+                    <div class="row">
+                    <h4 class="card-title col">
+                        Hawaiian Luau
+                    </h4>
+                    <h4 class="col-auto">$12</h4>
+                  </div>
+                    <ul class="inline-bullets">
+                        <li>Sauce</li>
+                        <li>Cheese</li>
+                        <li>Pepperoni</li>
+                        <li>Ham</li>
+                        <li>Pineapple</li>
+                    </ul>                
+                    <p>
+                        Sweet, salty, and tropical. Add spicy peppers for a kick.
+                    </p>
+                </div>
+            </div>
+            <div class="pb-3 col">
+                <div class="card card-body gp-card-border gp-menu-card-dark h-100">
+                    <div class="row">
+                    <h4 class="card-title col gp-favorite">
+                        Street-Meat Combo
+                    </h4>
+                    <h4 class="col-auto">$12</h4>
+                  </div>
+                    <ul class="inline-bullets">
+                        <li>Sauce</li>
+                        <li>Cheese</li>
+                        <li>Pepperoni</li>
+                        <li>Sausage</li>
+                    </ul>                
+                    <p>
+                        Simple, hearty, and always satisfying.
+                    </p>
+                </div>
+            </div>
+            <div class="pb-3 col">
+                <div class="card card-body gp-card-border gp-menu-card-dark h-100">
+                    <div class="row">
+                    <h4 class="card-title col">
+                        Market-Day Veg
+                    </h4>
+                    <h4 class="col-auto">$12</h4>
+                  </div>
+                    <ul class="inline-bullets">
+                        <li>Sauce</li>
+                        <li>Cheese</li>
+                        <li>Mushrooms</li>
+                        <li>Onions</li>
+                        <li>Green Peppers</li>
+                        <li>Banana Peppers</li>
+                        <li>Black Olives</li>
+                    </ul>                
+                    <p>
+                        Fresh, colorful, and loaded with crunch.
+                    </p>
+                </div>
+            </div>
+            <div class="pb-3 col">
+                <div class="card card-body gp-card-border gp-menu-card-dark h-100">
+                    <div class="row">
+                    <h4 class="card-title col">
+                        Mom's Pie
+                    </h4>
+                    <h4 class="col-auto">$11</h4>
+                  </div>
+                    <ul class="inline-bullets">
+                        <li>Sauce</li>
+                        <li>Cheese</li>
+                        <li>Pepperoni</li>
+                        <li>Mushrooms</li>
+                        <li>Onions</li>
+                    </ul>                
+                    <p>
+                        Fresh, colorful, and loaded with crunch.
+                    </p>
+                </div>
+            </div>
+            </div>        
+
+        </div>
+
+        
+
+    </section>
+</body>
+
+</html>
