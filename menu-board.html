@@ -38,7 +38,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 
     <style>
-        body, html { margin: 0; padding: 0; width: 1920px; height: 1080px; overflow: hidden; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
 
         :root {
             /* Primary Colors */
@@ -77,12 +77,12 @@
         h1 {
             font-family: 'Nunito', sans-serif;
             font-weight: 800;
-            font-size: 3vw;
+            font-size: 2.5vw;
         }
         h2, h3, h4 {
             font-family: 'Nunito', sans-serif;
             font-weight: 700;
-            font-size: 2vw;
+            font-size: 1.8vw;
         }
 
         p {
@@ -90,6 +90,12 @@
             font-weight: 400;
             font-size: 1.25vw;
             margin: 0px;
+        }
+
+        li:not(.inline-bullets li) {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 400;
+            font-size: 1.25vw;
         }
         .inline-bullets {
     list-style: none;
@@ -117,6 +123,15 @@ h4+h4 {
 .toppings{
   list-style:none;
 }
+
+.hothoney-gold {
+  background-color: var(--gp-hothoney-gold);
+    color: var(--bs-body-bg);
+}
+
+.card {
+    border-left: 5px solid var(--gp-fire-red);
+}
     </style>
 </head>
 
@@ -130,13 +145,13 @@ h4+h4 {
     
     <div class="row gx-5 pt-2">
 
-        <div class="col-3">
+        <div class="col-4">
           <div>
             <h1>Toppings</h1>
                        
             <ul class="toppings">
               <li class="">
-                <h4>Meats &dash; <span class="hothoney-gold badge rounded-pill">75&cent;</span></h4>
+                <h4>Meats &dash; <span class="badge rounded-pill hothoney-gold">75&cent;</span></h4>
               </li>
               <ul class="toppings">
                 <li><b>Pepperoni</b> — #1 topping in the region; cup-and-char style</li>
@@ -156,6 +171,8 @@ h4+h4 {
                 <li><b>Pineapple</b> — controversial but loyal fanbase</li>
               </ul>
             </ul>
+
+            <h1>Custom Creations</h1>
             <div class="pb-3">
                 <div class="card card-body gp-card-border gp-menu-card-dark">
                     <div>
@@ -172,7 +189,7 @@ h4+h4 {
           </div>
         </div>
 
-        <div class="col-9">
+        <div class="col-8">
               <h1>
                 Signature Pizza
             </h1>
