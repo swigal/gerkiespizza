@@ -213,6 +213,10 @@ h4~p{
     /*background-color: var(--gp-creamy-mozz);*/
 }
 
+.gp-active {
+    color: var(--gp-brickoven-orange);
+}
+
 .gallery-strip {
       display: grid;
       grid-auto-flow: column;
