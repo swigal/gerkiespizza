@@ -1,88 +1,99 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gerkies Pizza Pop-Up</title>
-<meta name="description" content="Gerkies brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
-<meta name="keywords" content="Pizza, Parkersburg, Belpre, Ohio, OH, WV, West Virginia, Pop-Up, local, locally owned">
-<meta name="author" content="Samuel Wigal">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Gerkies Pizza Pop-Up">
-<meta property="og:description" content="Gerkies brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://gerkiespizza.samuelwigal.com/assets/link-preview-image-1200x630.jpeg">
-<meta property="og:site_name" content="Gerkies Pizza Pop-UP">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerkies Pizza Pop-Up</title>
+  <meta name="description"
+    content="Gerkies brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
+  <meta name="keywords" content="Pizza, Parkersburg, Belpre, Ohio, OH, WV, West Virginia, Pop-Up, local, locally owned">
+  <meta name="author" content="Samuel Wigal">
 
-<!--Favicon & PWA Setup-->
-<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png?v=20260507" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg?v=20260507" />
-<link rel="shortcut icon" href="/favicon/favicon.ico?v=20260507" />
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=20260507" />
-<meta name="apple-mobile-web-app-title" content="Gerkies" />
-<link rel="manifest" href="/favicon/site.webmanifest?v=20260507" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gerkies Pizza Pop-Up">
+  <meta property="og:description"
+    content="Gerkies brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://gerkiespizza.samuelwigal.com/assets/link-preview-image-1200x630.jpeg">
+  <meta property="og:site_name" content="Gerkies Pizza Pop-UP">
 
-    <!--Bootstrap Links-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+  <!--Favicon & PWA Setup-->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png?v=20260507" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg?v=20260507" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico?v=20260507" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=20260507" />
+  <meta name="apple-mobile-web-app-title" content="Gerkies" />
+  <link rel="manifest" href="/favicon/site.webmanifest?v=20260507" />
+
+  <!--Bootstrap Links-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- Google Fonts - Gerkie's Brand -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
-    <!-- Load external CSS styles -->
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+  <!-- Google Fonts - Gerkie's Brand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <!-- Load external CSS styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
 
   <header class="container-fluid pb-1">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <div
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
         <a href="./index.html" class="d-inline-flex">
-        <img src="./assets/gerkies-pizza-secondary.svg" alt="Gerkie's Pizza" height="55px" width="auto">
+          <img src="./assets/gerkies-pizza-secondary.svg" alt="Gerkie's Pizza" height="55px" width="auto">
         </a>
       </div>
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li>
-          <a href="#about" class="nav-link px-2">
+          <a href="./index.html" class="nav-link px-2">
             Home
           </a>
         </li>
         <li>
-          <a href="#menu" class="nav-link px-2">
+          <a href="./menu.html" class="nav-link px-2">
             Menu
           </a>
         </li>
         <li>
-          <a href="#pop-ups" class="nav-link px-2">
+          <a href="./booking.html" class="nav-link px-2">
             Pop-Ups
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link px-2">
+          <a href="./index.html#about" class="nav-link px-2">
             About
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link px2">
+          <a href="./index.html#gallery" class="nav-link px2">
             Gallery
           </a>
         </li>
       </ul>
       <div class="col-md-3 text-end">
-        <button type="button" class="btn-gp btn-gp-primary"><a href="mailto:bookmypopup@gerkiespizza.samuelwigal.com?subject=Pop-Up%20Booking&body=Thank%20you%20for%20choosing%20Gerkies%20Pizza%20for%20your%20event.%20%20Please%20fill%20out%20the%20form%20below%20and%20we%20will%20be%20in%20touch%20to%20plan%20the%20next%20pop-up.%0A%0AName%3A%0AEmail%3A%0APhone%3A%0AEvent%20Type%3A%0AEvent%20Date%3A%0AApproximate%20Headcount%3A%0AEvent%20Details%3A%20Tell%20us%20about%20you%20event...%0A%0A">Contact / Booking</a></button>
+        <button type="button" class="btn-gp btn-gp-primary"><a
+            href="mailto:bookmypopup@gerkiespizza.samuelwigal.com?subject=Pop-Up%20Booking&body=Thank%20you%20for%20choosing%20Gerkies%20Pizza%20for%20your%20event.%20%20Please%20fill%20out%20the%20form%20below%20and%20we%20will%20be%20in%20touch%20to%20plan%20the%20next%20pop-up.%0A%0AName%3A%0AEmail%3A%0APhone%3A%0AEvent%20Type%3A%0AEvent%20Date%3A%0AApproximate%20Headcount%3A%0AEvent%20Details%3A%20Tell%20us%20about%20you%20event...%0A%0A">Contact
+            / Booking</a></button>
       </div>
     </div>
-    
+
   </header>
-<!-- Hero Section-->
+  <!-- Hero Section-->
   <section class="hero-section position-relative" style="min-height:100vh;">
     <div class="container-lg position-absolute top-50 start-50 translate-middle text-center pb-5">
-      <img src="./assets/gerkies-pizza-primary-light.svg" alt="Gerkie's Pizza Pop-Up" style="max-height: 300px; width: auto;" class="d-block mx-auto">
+      <img src="./assets/gerkies-pizza-primary-light.svg" alt="Gerkie's Pizza Pop-Up"
+        style="max-height: 300px; width: auto;" class="d-block mx-auto">
       <h1 class="hero-title py-5">
         Fresh‑fired pies. Bold flavors. Pizza worth chasing.
       </h1>
@@ -100,22 +111,24 @@
       </div>
     </div>
   </section>
-<!--About Us Section-->
+  <!--About Us Section-->
   <section id="about" class="container-lg py-5">
     <h2>
       Pizza That Shows Up Where the People Are
     </h2>
     <p>
-      Gerkie’s brings handcrafted pies, good vibes, and a whole lot of flavor to breweries, markets, and events all over town. We pop up, fire up, and serve up unforgettable slices.
+      Gerkie’s brings handcrafted pies, good vibes, and a whole lot of flavor to breweries, markets, and events all over
+      town. We pop up, fire up, and serve up unforgettable slices.
     </p>
     <p>
-      Gerkie’s Pizza is still cooking behind the scenes. We’re in the concept phase right now and not open to the public — but we can’t wait to share our pies with you soon.
+      Gerkie’s Pizza is still cooking behind the scenes. We’re in the concept phase right now and not open to the public
+      — but we can’t wait to share our pies with you soon.
     </p>
     <button type="button" class="btn-gp btn-gp-tertiary">
       Learn More
     </button>
   </section>
-<!-- Featured Menu Section-->
+  <!-- Featured Menu Section-->
   <section id="menu" class="container-lg my-5">
     <h2 class="pb-3">
       Featured Menu
@@ -178,7 +191,7 @@
       <a href="./menu.html">View the Full Menu</a>
     </button>
   </section>
-<!-- Book Us Section-->
+  <!-- Book Us Section-->
   <section id="booking" class=" nav-bg" style="padding: var(--fs-5) 0">
     <div class="container-lg" style="color:var(--gp-creamy-mozz);">
       <div class="row">
@@ -191,15 +204,15 @@
           </p>
         </div>
         <div class=" col-lg-3 align-self-center text-center text-lg-end">
-          <button type="button" class="btn-gp btn-gp-secondary"><a href="mailto:bookmypopup@gerkiespizza.samuelwigal.com?subject=Pop-Up%20Booking&body=Thank%20you%20for%20choosing%20Gerkies%20Pizza%20for%20your%20event.%20%20Please%20fill%20out%20the%20form%20below%20and%20we%20will%20be%20in%20touch%20to%20plan%20the%20next%20pop-up.%0A%0AName%3A%0AEmail%3A%0APhone%3A%0AEvent%20Type%3A%0AEvent%20Date%3A%0AApproximate%20Headcount%3A%0AEvent%20Details%3A%20Tell%20us%20about%20you%20event...%0A%0A">
-            Book Your Pop-Up</a>
-    
+          <button type="button" class="btn-gp btn-gp-secondary"><a href="./booking.html#booking-form">
+              Book Your Pop-Up</a>
+
           </button>
         </div>
       </div>
     </div>
   </section>
-<!-- Events Section-->
+  <!-- Events Section-->
   <section id="pop-ups" class="container-lg my-5">
     <h2>
       Where We're Popping Up Next
@@ -216,166 +229,168 @@
             </h4>
             <p>
               Time: Sunday, 12PM to 8PM
-              <p>
-                Address: 100 2nd Street, Mytown, PK 94302
-              </p>
-              <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                <button type="button" class="btn btn-gp-tertiary">
-                  Add to Calendar
-                </button>
-                <button type="button" class="btn btn-gp-tertiary">
-                  Get Directions
-                </button>
-              </div>
+            <p>
+              Address: 100 2nd Street, Mytown, PK 94302
+            </p>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+              <button type="button" class="btn btn-gp-tertiary">
+                Add to Calendar
+              </button>
+              <button type="button" class="btn btn-gp-tertiary">
+                Get Directions
+              </button>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 gp-card">
-            <div class="card-body">
-              <h4 class="card-title">
-                Mytown Public Library
-              </h4>
-              <p>
-                Time: Tuesday, 11AM to 4PM
-              </p>
-              <p>
-                Address: 1342 5th Street, Mytown, PK 94302
-              </p>
-              <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                <button type="button" class="btn btn-gp-tertiary">
-                  Add to Calendar
-                </button>
-                <button type="button" class="btn btn-gp-tertiary">
-                  Get Directions
-                </button>
-              </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 gp-card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Mytown Public Library
+            </h4>
+            <p>
+              Time: Tuesday, 11AM to 4PM
+            </p>
+            <p>
+              Address: 1342 5th Street, Mytown, PK 94302
+            </p>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+              <button type="button" class="btn btn-gp-tertiary">
+                Add to Calendar
+              </button>
+              <button type="button" class="btn btn-gp-tertiary">
+                Get Directions
+              </button>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 gp-card">
-            <div class="card-body">
-              <h4 class="card-title">
-                Stone Bridge Market
-              </h4>
-              <p>
-                Time: Friday, 11AM to 5PM
-                <p>
-                  Address: 8541 Stone Bridge Rd, Mytown, PK 94302
-                </p>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                  <button type="button" class="btn btn-gp-tertiary">
-                    <a target="_blank" href="#pop-ups">Add to Calendar</a>
-                  </button>
-                  <button type="button" class="btn btn-gp-tertiary">
-                    <a target="_blank" href="#pop-ups">Get Directions</a>
-                  </button>
-                </div>
-              </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 gp-card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Stone Bridge Market
+            </h4>
+            <p>
+              Time: Friday, 11AM to 5PM
+            <p>
+              Address: 8541 Stone Bridge Rd, Mytown, PK 94302
+            </p>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+              <button type="button" class="btn btn-gp-tertiary">
+                <a target="_blank" href="#pop-ups">Add to Calendar</a>
+              </button>
+              <button type="button" class="btn btn-gp-tertiary">
+                <a target="_blank" href="#pop-ups">Get Directions</a>
+              </button>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100 gp-card">
-              <div class="card-body">
-                <h4 class="card-title">
-                  Mytown City Hospital
-                </h4>
-                <p>
-                  Time: Next Saturday, 12PM to 6PM
-                  <p>
-                    Address: 42 Hawthorn Way, Mytown, PK 94302
-                  </p>
-                  <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                    <button type="button" class="btn btn-gp-tertiary">
-                      Add to Calendar
-                    </button>
-                    <button type="button" class="btn btn-gp-tertiary">
-                      Get Directions
-                    </button>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 gp-card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Mytown City Hospital
+            </h4>
+            <p>
+              Time: Next Saturday, 12PM to 6PM
+            <p>
+              Address: 42 Hawthorn Way, Mytown, PK 94302
+            </p>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+              <button type="button" class="btn btn-gp-tertiary">
+                Add to Calendar
+              </button>
+              <button type="button" class="btn btn-gp-tertiary">
+                Get Directions
+              </button>
             </div>
           </div>
-          <button type="button" class="btn-gp btn-gp-tertiary">
-            See All Events
-          </button>
-        </section>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn-gp btn-gp-tertiary">
+      See All Events
+    </button>
+  </section>
 
-        <section class="container-lg my-5" id="gallery">
-          <h2>Check out Gerkie's Pizza IRL</h2>
-          <div class="gallery-strip">
-            <div class="gallery-item"><img src="./assets/pizza-drizzle.jpg" alt="pizza drizzle" height="100%" width="auto"></div>
-            <div class="gallery-item">Pop‑up booth</div>
-            <div class="gallery-item">Friends with slices</div>
-            <div class="gallery-item">Oven in action</div>
-            <div class="gallery-item">Dough stretch</div>
-            <div class="gallery-item">Night pop‑up</div>
-          </div>
-        </section>
+  <section class="container-lg my-5" id="gallery">
+    <h2>Check out Gerkie's Pizza IRL</h2>
+    <div class="gallery-strip">
+      <div class="gallery-item"><img src="./assets/pizza-drizzle.jpg" alt="pizza drizzle" height="100%" width="auto">
+      </div>
+      <div class="gallery-item">Pop‑up booth</div>
+      <div class="gallery-item">Friends with slices</div>
+      <div class="gallery-item">Oven in action</div>
+      <div class="gallery-item">Dough stretch</div>
+      <div class="gallery-item">Night pop‑up</div>
+    </div>
+  </section>
 
-        <footer class="nav-bg py-5">
-          <div class="container-lg row g-2 mx-auto justify-content-center">
-            <div class="col-12 col-md-6 col-lg-4 text-center">
-              <img src="./assets/gerkies-pizza-secondary.svg" class="d-block mx-auto" alt="gerkies pizza" height="60px" width="auto">
-              <p style="color: var(--gp-creamy-mozz)" class="text-center">
-                Pizza worth chasing.
-              </p>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 py-3 text-center">
-              <nav class="nav justify-content-center">
-                <a class="nav-link" href="#">
-                  Home
-                </a>
-                <a class="nav-link" href="#">
-                  Menu
-                </a>
-                <a class="nav-link">
-                  Pop-Ups
-                </a>
-                <a class="nav-link">
-                  About
-                </a>
-                <a class="nav-link" >
-                  Gallery
-                </a>
-                <a class="nav-link" >
-                  Booking
-                </a>
-              </nav>
-            </div>
-            <div class="col-12 col-md-12 col-lg-4 text-center">
-              <div class="social-icons">
-                <a href="https://facebooks.com">
-                  <i class="bi bi-facebook">
-                  </i>
-                </a>
-                <a href="https://instagram.com">
-                  <i class="bi bi-instagram">
-                  </i>
-                </a>
-                <a href="#">
-                  <i class="bi bi-bell">
-                  </i>
-                </a>
-                <a href="#">
-                  <i class="bi bi-calendar-week-fill">
-                  </i>
-                </a>
-              </div>
-              <div style="color: var(--gp-creamy-mozz)" class="text-center">
-                &copy; 2026 Gerkies Pizza Pop-Up
-              </div>
-            </div>
-          </div>
-          <div class="text-center">
-          <a class="pt-1" style="color: var(--gp-creamy-mozz)" href="https://samuelwigal.com"> 
-            Designed by 
-            <span style="font-family: 'Nothing You Could Do', cursive; font-weight: 400; font-style: normal; font-size: 150%">SW</span></a></div>
-        </footer>
-        <!-- Load external JavaScript -->
-        <script src="scripts.js">
-        </script>
-      </body>
-    </html>
+  <footer class="nav-bg py-5">
+    <div class="container-lg row g-2 mx-auto justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4 text-center">
+        <img src="./assets/gerkies-pizza-secondary.svg" class="d-block mx-auto" alt="gerkies pizza" height="60px"
+          width="auto">
+        <p style="color: var(--gp-creamy-mozz)" class="text-center">
+          Pizza worth chasing.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 py-3 text-center">
+        <nav class="nav justify-content-center">
+          <a class="nav-link" href="./index.html">
+            Home
+          </a>
+          <a class="nav-link" href="./menu.html">
+            Menu
+          </a>
+          <a class="nav-link" href="./booking.html">
+            Pop-Ups
+          </a>
+          <a class="nav-link" href="./index.html#about">
+            About
+          </a>
+          <a class="nav-link" href="./index.html#gallery">
+            Gallery
+          </a>
+        </nav>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4 text-center">
+        <div class="social-icons">
+          <a href="https://facebooks.com">
+            <i class="bi bi-facebook">
+            </i>
+          </a>
+          <a href="https://instagram.com">
+            <i class="bi bi-instagram">
+            </i>
+          </a>
+          <a href="mailto:hello@gerkiespizza.samuelwigal.com">
+            <i class="bi bi-bell">
+            </i>
+          </a>
+          <a href="./booking.html#pop-ups">
+            <i class="bi bi-calendar-week-fill">
+            </i>
+          </a>
+        </div>
+        <div style="color: var(--gp-creamy-mozz)" class="text-center">
+          &copy; 2026 Gerkies Pizza Pop-Up
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a class="pt-1" style="color: var(--gp-creamy-mozz)" href="https://samuelwigal.com">
+        Designed by
+        <span
+          style="font-family: 'Nothing You Could Do', cursive; font-weight: 400; font-style: normal; font-size: 150%">SW</span></a>
+    </div>
+  </footer>
+  <!-- Load external JavaScript -->
+  <script src="scripts.js">
+  </script>
+</body>
+
+</html>
