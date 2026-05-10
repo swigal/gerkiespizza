@@ -191,75 +191,130 @@
   <!--Booking Form-->
   <section class="container-lg pt-3" id="booking-form">
     <h2>Book your pop-up today!</h2>
-    <p>Not ready to book your pop-up? <a href="mailto:hello@gerkiespizza.samuelwigal.com"
-        style="color:var(--gp-fire-red);" onmouseover="this.style.color='var(--gp-basil-green)';"
-        onmouseout="this.style.color='var(--gp-fire-red)';">Contact us</a> with any questions you may have. </p>
-    <form class="row was-validated" action="https://formspree.io/f/mnjwbgep" method="POST" id="bookingForm"
-      target="_blank">
-      <div class="row mb-3">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <label for="name" class="form-label">Full Name</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="col-sm-6">
-          <label for="phone" class="form-label">Phone</label>
-          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone Number" required>
-        </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-12">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-        </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <label for="date" class="form-label">Preferred Date</label>
-          <input type="date" class="form-control" id="date" name="date" required>
-        </div>
-        <div class="col-sm-6">
-          <label for="guests" class="form-label">Estimated Attendance</label>
-          <input type="number" class="form-control" id="guests" name="guests" placeholder="Number of Guests" required>
-        </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
-          <label for="eventType" class="form-label">Event Type</label>
-          <select id="eventType" class="form-select" name="eventType" required>
-            <option selected disabled value="">Choose...</option>
-            <option value="private">Private Event</option>
-            <option value="corporate">Corporate Event</option>
-            <option value="festival">Festival / Market</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="col-md-8 col-sm-12">
-          <label for="location" class="form-label">Event Location</label>
-          <input type="text" class="form-control" id="location" name="location" placeholder="Venue or Address" required>
-        </div>
-      </div>
+    <div class="row">
+      <article class="col-md-6 col-12">
 
-      <div class="mb-3 row ">
-        <div class="col-12">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us about your event..."
-            required></textarea>
+        <p>
+          Not ready to book your pop-up? 
+          <a href="mailto:hello@gerkiespizza.samuelwigal.com"
+            style="color:var(--gp-fire-red);" onmouseover="this.style.color='var(--gp-basil-green)';"
+            onmouseout="this.style.color='var(--gp-fire-red)';">
+            Contact us
+          </a> 
+          with any questions you may have. 
+        </p>
+
+        <h3 style="margin-top:1.75rem;">Booking Request Form</h3>
+
+        <form class="row was-validated" action="https://formspree.io/f/mnjwbgep" method="POST" id="bookingForm"
+          target="_blank">
+          <div class="row mb-3">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-sm-6">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="(740) 123-4567" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <label for="date" class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="col-sm-6">
+              <label for="headcount" class="form-label">Estimated Attendance</label>
+              <input type="number" class="form-control" id="headcount" name="headcount" placeholder="Approx. headcount"
+                required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
+              <label for="eventType" class="form-label">Event Type</label>
+              <select id="eventType" class="form-select" name="eventType" required>
+                <option selected disabled value="">Choose...</option>
+                <option value="private">Private Event</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="festival">Festival / Market</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="col-md-8 col-sm-12">
+              <label for="location" class="form-label">Event Location</label>
+              <input type="text" class="form-control" id="location" name="location" placeholder="Venue or Address"
+                required>
+            </div>
+          </div>
+
+          <div class="mb-3 row ">
+            <div class="col-12">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4"
+                placeholder="Tell us about your event..." required></textarea>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col">
+              <input class="form-check-input" type="checkbox" value="" id="consentCheck" name="consentCheck" required>
+              <label class="form-check-label" for="consentCheck">
+                I consent to being contacted by Gerkie's Pizza regarding my booking request. This form uses Formspree
+                for submission and my information will be handled in accordance with their privacy policy.
+              </label>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-12">
+              <button type="submit" class="btn-gp btn-gp-primary">Book Now!</button>
+            </div>
+          </div>
+        </form>
+      </article>
+      <aside class="col-md-6 col-12">
+        <h3>What to Expect</h3>
+        <p>
+          When you book a pop-up with Gerkie's Pizza, you're not just getting delicious food – you're creating an
+          experience. Our team will work closely with you to understand your vision and tailor our services to fit your
+          event. From intimate gatherings to large festivals, we bring the same passion and quality to every pop-up.
+          Expect mouthwatering pizzas made with fresh, locally sourced ingredients, served with a side of great vibes
+          and unforgettable memories.
+        </p>
+        <h3>General Contact</h3>
+        <p style="font-size:0.9rem;margin-top:0.35rem;">
+          Have questions about pop‑ups, menu options, or availability? Reach out anytime.
+        </p>
+        <p style="font-size:0.9rem;margin-top:0.75rem;">
+          <strong>Email:</strong> hello@gerkiespizza.samuelwigal.com<br />
+          <strong>Instagram:</strong> @gerkiespizza<br />
+          <strong>Facebook:</strong> /gerkiespizza
+        </p>
+
+        <h3 style="margin-top:1.75rem;">FAQ</h3>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>How far do you travel?</h3>
+            <p>We typically serve within a set radius of our home base, but reach out and we’ll see what’s possible.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you cater private events?</h3>
+            <p>Yes—birthdays, weddings, corporate events, and more. Use the form to tell us about your plans.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer gluten‑free options?</h3>
+            <p>We can offer limited gluten‑free options at select pop‑ups. Ask about availability when you book.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can you handle large crowds?</h3>
+            <p>We’re built for busy nights and hungry lines. Let us know your expected headcount and timing.</p>
+          </div>
         </div>
-      </div>
-      <div class="mb-3 row">
-        <div class="col">
-          <input class="form-check-input" type="checkbox" value="" id="consentCheck" name="consentCheck" required>
-          <label class="form-check-label" for="consentCheck">
-            I consent to being contacted by Gerkie's Pizza regarding my booking request. This form uses Formspree for submission and my information will be handled in accordance with their privacy policy.
-          </label>
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <div class="col-12">
-          <button type="submit" class="btn-gp btn-gp-primary">Book Now!</button>
-        </div>
-      </div>
-    </form>
+      </aside>
   </section>
 
 
