@@ -37,7 +37,7 @@
 
 <body>
 
- <header class="container-fluid pb-1">
+  <header class="container-fluid pb-1">
     <div
       class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
@@ -73,8 +73,7 @@
         </li>
       </ul>
       <div class="col-md-3 text-end">
-        <button type="button" class="btn-gp btn-gp-primary"><a
-            href="./pop-ups.html#booking-form">Contact
+        <button type="button" class="btn-gp btn-gp-primary"><a href="./pop-ups.html#booking-form">Contact
             / Booking</a></button>
       </div>
     </div>
@@ -102,12 +101,12 @@
             </p>
           </div>
           <div class="card-footer">
-              <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                <button type="button" class="btn btn-gp-tertiary">
-                  Add to Calendar
-                </button>
-                <button type="button" class="btn btn-gp-tertiary">
-                  Get Directions
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+              <button type="button" class="btn btn-gp-tertiary">
+                Add to Calendar
+              </button>
+              <button type="button" class="btn btn-gp-tertiary">
+                Get Directions
               </button>
             </div>
           </div>
@@ -127,15 +126,15 @@
             </p>
           </div>
           <div class="card-footer">
-              <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                <button type="button" class="btn btn-gp-tertiary">
-                  Add to Calendar
-                </button>
-                <button type="button" class="btn btn-gp-tertiary">
-                  Get Directions
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+              <button type="button" class="btn btn-gp-tertiary">
+                Add to Calendar
+              </button>
+              <button type="button" class="btn btn-gp-tertiary">
+                Get Directions
               </button>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
       <div class="col">
@@ -148,15 +147,15 @@
               Time: Friday, 11AM to 5PM
             <p>
               Address: 8541 Stone Bridge Rd, Mytown, PK 94302
-            </p>            
+            </p>
           </div>
           <div class="card-footer">
-              <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                <button type="button" class="btn btn-gp-tertiary">
-                  Add to Calendar
-                </button>
-                <button type="button" class="btn btn-gp-tertiary">
-                  Get Directions
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+              <button type="button" class="btn btn-gp-tertiary">
+                Add to Calendar
+              </button>
+              <button type="button" class="btn btn-gp-tertiary">
+                Get Directions
               </button>
             </div>
           </div>
@@ -173,25 +172,28 @@
             <p>
               Address: 42 Hawthorn Way, Mytown, PK 94302
             </p>
-            
-        </div>
-        <div class="card-footer">
-              <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                <button type="button" class="btn btn-gp-tertiary">
-                  Add to Calendar
-                </button>
-                <button type="button" class="btn btn-gp-tertiary">
-                  Get Directions
+
+          </div>
+          <div class="card-footer">
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+              <button type="button" class="btn btn-gp-tertiary">
+                Add to Calendar
+              </button>
+              <button type="button" class="btn btn-gp-tertiary">
+                Get Directions
               </button>
             </div>
           </div>
+        </div>
       </div>
-    </div>
   </section>
 
-
+  <!--Booking Form-->
   <section class="container-lg pt-3" id="booking-form">
     <h2>Book your pop-up today!</h2>
+    <p>Not ready to book your pop-up? <a href="mailto:hello@gerkiespizza.samuelwigal.com"
+        style="color:var(--gp-fire-red);" onmouseover="this.style.color='var(--gp-basil-green)';"
+        onmouseout="this.style.color='var(--gp-fire-red)';">Contact us</a> with any questions you may have. </p>
     <form class="row was-validated" action="https://formspree.io/f/mnjwbgep" method="POST" id="bookingForm"
       target="_blank">
       <div class="row mb-3">
@@ -221,7 +223,7 @@
         </div>
       </div>
       <div class="row mb-3">
-        <div class="col-12">
+        <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
           <label for="eventType" class="form-label">Event Type</label>
           <select id="eventType" class="form-select" name="eventType" required>
             <option selected disabled value="">Choose...</option>
@@ -231,18 +233,25 @@
             <option value="other">Other</option>
           </select>
         </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-12">
+        <div class="col-md-8 col-sm-12">
           <label for="location" class="form-label">Event Location</label>
           <input type="text" class="form-control" id="location" name="location" placeholder="Venue or Address" required>
         </div>
       </div>
+
       <div class="mb-3 row ">
         <div class="col-12">
           <label for="message" class="form-label">Message</label>
           <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us about your event..."
             required></textarea>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <div class="col">
+          <input class="form-check-input" type="checkbox" value="" id="consentCheck" name="consentCheck" required>
+          <label class="form-check-label" for="consentCheck">
+            I consent to being contacted by Gerkie's Pizza regarding my booking request. This form uses Formspree for submission and my information will be handled in accordance with their privacy policy.
+          </label>
         </div>
       </div>
       <div class="mb-3 row">
