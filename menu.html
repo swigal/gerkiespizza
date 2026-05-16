@@ -16,7 +16,7 @@
     content="Gerkies brings handcrafted pies, good vibes, and a whole lot of flavor to the community. We pop up, fire up, and serve up unforgettable slices.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://gerkiespizza.samuelwigal.com/assets/link-preview-image-1200x630.jpeg">
-  <meta property="og:site_name" content="Gerkies Pizza Pop-UP">`
+  <meta property="og:site_name" content="Gerkies Pizza Pop-UP">
 
   <!--Favicon & PWA Setup-->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png?v=20260507" sizes="96x96" />
@@ -69,9 +69,6 @@
       list-style: none;
     }
 
-    ul li {
-      font-size: var(--fs-0);
-    }
 
     h4+h4 {
       color: var(--gp-hothoney-gold);
@@ -98,9 +95,8 @@
 
 <body>
 
-  <header class="container-fluid pb-1">
-    <div
-      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+  <nav class="container-fluid pb-1 nav-bg" role="navigation">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
         <a href="./index.html" class="d-inline-flex">
           <img src="./assets/gerkies-pizza-secondary.svg" alt="Gerkie's Pizza" height="55px" width="auto">
@@ -108,17 +104,17 @@
       </div>
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li>
-          <a href="./index.html" class="nav-link px-2">
+          <a href="./index.html" class="nav-link px-2 gp-active">
             Home
           </a>
         </li>
         <li>
-          <a href="./menu.html" class="nav-link px-2 gp-active">
+          <a href="./menu.html" class="nav-link px-2">
             Menu
           </a>
         </li>
         <li>
-          <a href="./booking.html" class="nav-link px-2">
+          <a href="./pop-ups.html" class="nav-link px-2">
             Pop-Ups
           </a>
         </li>
@@ -134,13 +130,12 @@
         </li>
       </ul>
       <div class="col-md-3 text-end">
-        <button type="button" class="btn-gp btn-gp-primary"><a
-            href="./pop-ups.html#booking-form">Contact
-            / Booking</a></button>
+        <button type="button" class="btn-gp btn-gp-primary" href="./pop-ups.html#booking-form">Contact
+            / Booking</button>
       </div>
     </div>
+  </nav>
 
-  </header>
   <section class="container-lg" id="signature-pies">
 
     <div class="row gx-5 pt-5">

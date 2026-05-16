@@ -35,10 +35,8 @@ body {
     background-color: var(--gp-creamy-mozz);
 }
 
-.nav-bg, header{
-    --nav-color: var(--gp-charred-black);
-
-    background-color: hsl(from var(--nav-color) h s l);
+.nav-bg{
+    background-color: var(--gp-charred-black);
 }
 
 .nav-link {
@@ -117,7 +115,7 @@ h4~p{
       cursor: pointer;
       transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
     }
-.btn-gp a, .gp-btn a {
+.btn-gp a, .gp-btn a, .btn-gp, .gp-btn{
     text-decoration: none;
     color: inherit;
     font-weight: 700;
